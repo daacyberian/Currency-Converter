@@ -1,0 +1,634 @@
+*{
+    padding: 0;
+    margin : 0; 
+}
+#headers{
+    margin : 10px;
+    padding: 20px;
+    display: block;
+    color: blanchedalmond;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    border-radius: 10px;
+    background-color: rgba(44, 48, 43, 0.479);
+    margin-left: 70px; 
+}
+#headers{
+    animation-name: header-animation;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-delay: 0.3ms;
+    animation-direction:normal;
+}
+@keyframes header-animation{
+    0% {     
+        position: relative;
+        left: -250px;
+        opacity: 0;
+    }    
+    100%{     
+        position: relative;
+        left: 0px;
+    }
+}
+h2{
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+}
+h3{
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+input{
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    font-display:initial;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    background-color: rgba(44, 48, 43, 0.479);
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+    color: blanchedalmond;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.big-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/image.jpg);
+    image-rendering: -webkit-optimize-contrast;
+    background-size: cover;    
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid rgba(44, 48, 43, 0.752);
+    border-radius: 30px;
+    width: 55%;
+    height: 425px;
+    margin: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    background: url("/videos/video.mp4") no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.to,.from{
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(44, 48, 43, 0.692);
+    border-radius: 40px;
+    color:  rgb(177,33,33,1);
+}
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px , 0px , 2px , rgb(0px,0px,0px,0.5px);
+}
+select{
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.419);
+    color:white;
+    text-align: center;
+}
+#select{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+#icon{
+    width: 10%;
+    height: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    background-color: rgba(44, 48, 43, 0.692);
+    border-radius: 40px;
+    color:rgba(255, 255, 255, 0.614);
+    padding: 10px;
+    margin: 20px;   
+    cursor: pointer;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid grey;
+    border-right: 3px solid grey;
+}
+#icon:active{
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+#button{
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+button{
+    font-size: 20px;
+    width : 200px;
+    height: 50px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    background-color: rgba(44, 48, 43, 0.479);
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    color: blanchedalmond;
+}
+
+.Exchange-amount{
+    margin-top: 30px;
+}
+.dropdown{
+    animation-name: animation;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-delay: 0.3ms;
+    animation-direction:normal;
+}
+@keyframes animation {   
+    0% {     
+         position: relative;
+         right: -250px;
+         opacity: 0;
+    }    
+    100%{     
+        position: relative;
+         right: 0px;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 378px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+        height: 80%;
+        width: 50%;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 900;
+    }
+    h3{
+        font-size: 45px;
+        font-weight: 900;
+    }
+    .dropdown{
+        width: 30%;
+        height: 300px;
+   }
+   .to,.from{
+    width: 30%;
+    height: 30%;
+   }
+}
+@media screen and (min-width: 379px) and (max-width: 520px){ 
+    #headers{
+        margin : -200px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 38px;
+        font-weight: 700;   
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+   }
+   .to,.from{
+   
+    width: 50%;
+    height: 30%;
+   }
+}
+@media screen  and (min-width: 520px) and (max-width: 765px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 43px;
+        font-weight: 550;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 36px;
+        font-weight: 550;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+   }
+   .to,.from{
+   
+    width: 60%;
+    height: 30%;
+   }
+}
+@media screen and (min-width: 766px) and (max-width: 873px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 550;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 32px;
+        font-weight: 550;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;  
+   }
+   .to,.from{
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    height: 30%;
+   }
+}
+@media screen and (min-width: 874px) and (max-width: 929px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 550;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 28px;
+        font-weight: 550;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+      
+   }
+   .to,.from{
+    width: 60%;
+    height: 30%;
+   }
+}
+@media screen and (min-width: 930px) and (max-width: 1035px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 560;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 18px;
+        font-weight: 550;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+        margin: 20px;
+        margin-top: 30px;
+        padding: 20px;
+   }
+   .to,.from{
+    width: 60%;
+    height: 30%;
+   }
+}
+@media screen and (min-width: 1036px) and (max-width: 1157px) {
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 630;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;   
+   }
+   .to,.from{
+    width: 60%;
+    height: 30%;
+   }
+}
+@media screen and (min-width : 1158px) and (max-width: 1236px){
+   
+    #headers{
+        margin : 10px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 580;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+        margin: 20px;
+        margin-top: 30px;
+        padding: 20px;
+   }
+   .to,.from{
+    width: 70%;
+    height: 30%;
+   }
+}
+@media screen and (min-width : 1236px) and (max-width: 1271px){
+   
+    #headers{
+        margin : 20px;
+        margin-left: 90px;
+        padding: 20px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 650;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+        margin: 20px;
+        margin-top: 30px;
+        padding: 20px;
+   }
+   .to,.from{
+   
+    width: 70%;
+    height: 30%;
+   }
+   input{
+    font-weight: 600;
+    font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        width : 230px;
+        height: 50px;
+        margin: 10px;
+    }
+    p{
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    select{
+        font-size: 20px;
+        font-weight: 700;
+    }
+} 
+@media screen and (min-width : 1272px) and (max-width: 1372px){
+   
+    #headers{
+        margin : 20px;
+        margin-left: 90px;
+        padding: 20px;
+        width: 35%; 
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 650;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+       
+   }
+   .to,.from{
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    height: 30%;
+   }
+   input{
+    font-weight: 600;
+    font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        width : 230px;
+        height: 50px;
+        margin: 10px;
+    }
+    p{
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    select{
+        font-size: 20px;
+        font-weight: 700;
+    }
+} 
+@media screen and (min-width : 1372px) and (max-width: 1450px){
+   
+    #headers{
+        margin : 20px;
+        margin-left: 90px;
+        padding: 20px;
+        width: 35%; 
+    }
+    h2{ 
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 650;
+        text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+        margin-bottom: 10px;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+       
+   }
+   .to,.from{
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    height: 30%;
+   }
+   input{
+    font-weight: 600;
+    font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        width : 230px;
+        height: 50px;
+        margin: 10px;
+    }
+    p{
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    select{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+@media screen and (min-width : 1451px) and (max-width: 1600px){
+   
+    #headers{
+        margin : 20px;
+        margin-left: 90px;
+        padding: 20px;
+        width: 35%; 
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .dropdown{
+        width: 50%;
+        height: 420px;
+   }
+   .to,.from{
+    width: 70%;
+    height: 30%;
+   }
+   input{
+    font-weight: 600;
+    font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        width : 230px;
+        height: 50px;
+        margin: 10px;
+    }
+    p{
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    select{
+        font-size: 20px;
+        font-weight: 700;
+    }
+} 
+
+
