@@ -19,9 +19,9 @@ Supports conversion between multiple currencies.
 Responsive design for seamless usage across various devices.
 Technologies Used:
 
-HTML: Used for structuring the layout of the converter.
-CSS: Applied for styling and enhancing the visual appeal.
-JavaScript: Implemented for dynamic functionality and currency conversion logic.
+<p>HTML: Used for structuring the layout of the converter.</p>
+<p>CSS: Applied for styling and enhancing the visual appeal.</p>
+<p>JavaScript: Implemented for dynamic functionality and currency conversion through API.</p>
 
 <h2>🛠 How to use:</h2>
 
