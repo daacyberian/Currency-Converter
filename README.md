@@ -31,7 +31,6 @@ Choose the desired currency to convert to.
 The converted amount will be displayed instantly.
 </p>
 
-bash
     git clone https://github.com/daacyberian/Currency-Converter.git
 
 <h2 align="center">Working </h2>
