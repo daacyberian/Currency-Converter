@@ -16,10 +16,10 @@
 }
 #headers{
     animation-name: header-animation;
-    animation-duration: 2.5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
-    animation-delay: 0.3ms;
+    animation-delay: 2ms;
     animation-direction:normal;
 }
 @keyframes header-animation{
@@ -194,10 +194,10 @@ button{
 }
 .dropdown{
     animation-name: animation;
-    animation-duration: 2.5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
-    animation-delay: 0.3ms;
+    animation-delay: 2ms;
     animation-direction:normal;
 }
 @keyframes animation {   
