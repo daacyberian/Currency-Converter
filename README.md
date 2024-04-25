@@ -34,7 +34,7 @@ The converted amount will be displayed instantly.
     git clone https://github.com/daacyberian/Currency-Converter.git
 
 <h2 align="center">Working </h2>
-<p align="center"><img src="https://imgur.com/mcGMYsY.jpg"></p>
+<p align="center"><img src="https://imgur.com/c4E7vci.jpg"></p>
 <br>
 <p><b>For Video Tutorial </b><a href="https://www.loom.com/share/d76aad18cd8d431e821b0068dfa4698f?sid=636a4569-2569-4c02-b970-9a211804560c"> Click Here</a></p>
 
