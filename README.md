@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Currency Converter</h1>
 
-<p align="center"><img src="https://imgur.com/5fD32VF.jpg" alt="project-image"></p>
+<p align="center"><img src="/images/currency.jpg" alt="project-image"></p>
 
 <p>The Currency Converter is a mini-project built using HTML, CSS, and JavaScript. It provides a user-friendly interface for converting between different currencies. The user can input the amount in one currency and select the desired conversion currency from a dropdown menu. The converter then instantly displays the converted amount based on the latest exchange rates.
 <p/> 
