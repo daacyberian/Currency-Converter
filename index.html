@@ -4,93 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="images/currencyimg.png">
-    <style>
-        @keyframes slideInLeft {
-            0% { opacity: 0; transform: translateX(-50px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            0% { opacity: 0; transform: translateX(50px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-        .animate-left { animation: slideInLeft 0.8s ease-out forwards; }
-        .animate-right { animation: slideInRight 0.8s ease-out forwards; }
-        
-        .video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        
-        select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-        }
-        
-        input::placeholder { color: rgba(255, 255, 255, 0.5); }
-    </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('images/image.jpg')]">
-    <div class="flex flex-col lg:flex-row items-center gap-8 p-5 w-full max-w-4xl">
-        
-        <div class="w-full max-w-sm p-5 rounded-xl bg-[rgba(44,48,43,0.479)] shadow-[0_0_20px_rgba(0,0,0,0.75)] animate-left">
-            <h2 class="text-3xl md:text-4xl font-bold text-blanchedalmond mb-5 uppercase tracking-wide" style="color: #ffebcd; text-shadow: 0 0 20px rgba(145,135,135,0.75);">
-                Currency Converter
-            </h2>
-            <h3 class="text-xl md:text-2xl font-semibold text-blanchedalmond mb-3 uppercase tracking-wide" style="color: #ffebcd; text-shadow: 0 0 20px rgba(145,135,135,0.55);">
-                Enter Amount
-            </h3>
-            <input type="number" placeholder="0.00" 
-                class="w-full h-10 md:h-12 text-lg md:text-xl font-semibold rounded-full border-0 outline-none text-center bg-[rgba(44,48,43,0.479)] text-blanchedalmond shadow-[0_0_20px_rgba(0,0,0,0.75)]" 
-                style="color: #ffebcd;">
-            
-            <div class="flex justify-center mt-5">
-                <button id="convertBtn" class="w-44 md:w-52 h-11 md:h-12 text-lg font-bold rounded-full cursor-pointer bg-[rgba(44,48,43,0.479)] text-blanchedalmond shadow-[0_0_20px_rgba(0,0,0,0.75)] hover:scale-105 transition-transform duration-300" style="text-shadow: 0 0 20px rgba(145,135,135,0.75);">
-                    Exchange Rate
-                </button>
+<body>   
+    <div class="big-container">
+        <div id="headers" class="headers">
+            <h2>Currency Converter</h2>
+            <h3>Enter Amount</h3>
+            <input type="text" placeholder="0.00">
+            <div id="button" class="Exchange">
+                <button>Exchange Rate</button>
             </div>
-            
-            <div class="mt-6 p-4 rounded-lg bg-[rgba(44,48,43,0.479)]">
-                <p id="result" class="text-base md:text-lg font-semibold text-white text-center">Amount</p>
+            <div class="Exchange-amount">
+                <p>Amount</p>
             </div>
         </div>
-        
-        <form id="form" class="w-full max-w-sm animate-right">
-            <div class="relative rounded-2xl border-8 border-[rgba(44,48,43,0.752)] p-5 overflow-hidden bg-cover bg-center">
-                <video autoplay loop muted playsinline class="video-bg">
+        <form id="form">
+            <div class="dropdown">
+                <video autoplay loop muted playsinline class="video">
                     <source src="videos/video.mp4" type="video/mp4">
                 </video>
-                
-                <div class="relative z-10">
-                    <div class="flex flex-col items-center p-3 rounded-2xl bg-[rgba(44,48,43,0.692)] mb-3">
-                        <p class="text-lg font-bold text-white uppercase tracking-widest mb-2">From</p>
-                        <img id="fromFlag" src="https://flagsapi.com/US/shiny/64.png" class="w-12 h-8 rounded mb-2 object-cover shadow-md">
-                        <select name="from" class="w-48 p-3 text-sm font-bold rounded-full border border-white bg-black/40 text-white text-center cursor-pointer focus:border-pink-500 transition-colors"></select>
+                <div class="from">
+                    <p>From</p>
+                    <div>
+                        <img src="https://flagsapi.com/US/shiny/64.png">  
                     </div>
-                    
-                    <div id="icon" class="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-[rgba(44,48,43,0.692)] text-white/60 text-2xl cursor-pointer border-t-2 border-l-2 border-b-2 border-r-2 border-black rotate-90 hover:bg-pink-600 hover:text-white transition-all duration-300 shadow-lg">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    </div>
-                    
-                    <div class="flex flex-col items-center p-3 rounded-2xl bg-[rgba(44,48,43,0.692)] mt-3">
-                        <p class="text-lg font-bold text-white uppercase tracking-wididest mb-2">To</p>
-                        <img id="toFlag" src="https://flagsapi.com/PK/shiny/64.png" class="w-12 h-8 rounded mb-2 object-cover shadow-md">
-                        <select name="to" class="w-48 p-3 text-sm font-bold rounded-full border border-white bg-black/40 text-white text-center cursor-pointer focus:border-pink-500 transition-colors"></select>
+                    <div id="select" class="select1">
+                        <select name="from"></select> 
                     </div>
                 </div>
+                <div id="icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left" id="swap"></i>
+                </div>
+                <div class="to">
+                    <p>To</p>
+                    <div>
+                            <img src="https://flagsapi.com/PK/shiny/64.png" id="img">  
+                        </div>
+                        <div id="select" class="select2">
+                            <select name="to"></select>   
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </form>
-    </div>
-    
+    </div>    
     <script src="code.js"></script>
     <script src="app.js"></script>
 </body>
