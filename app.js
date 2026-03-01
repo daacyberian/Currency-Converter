@@ -1,16 +1,18 @@
 const Base_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 const dropdown = document.querySelectorAll(".dropdown select");
-const Button = document.querySelector(".Exchange button");
+const Button = document.querySelector("#convertBtn");
 const fromcurr = document.querySelector(".from select");
 const tocurr = document.querySelector(".to select");
-let ExchVal = document.querySelector(".Exchange-amount p");
+let ExchVal = document.querySelector("#result");
 
 const UpdateFlag = (select) => {
     let code = select.value;
     let countrycode = countryList[code];
     let newScr = `https://flagsapi.com/${countrycode}/shiny/64.png`;
-    let img = select.parentElement.previousElementSibling.querySelector("img");
-    img.src = newScr;
+    let img = select.parentElement.querySelector("img");
+    if (img) {
+        img.src = newScr;
+    }
 };
 
 for (let select of dropdown) {
@@ -31,12 +33,11 @@ for (let select of dropdown) {
 }
 
 const UpdateExchange = async () => {
-    let Amount = document.querySelector(".headers input");
+    let Amount = document.querySelector("input");
     let AmountVal = Amount.value;
 
     if (AmountVal === "" || AmountVal < 0) {
         AmountVal = 1;
-        Amount.value = "";
     }
 
     Button.textContent = "Converting...";
@@ -55,6 +56,7 @@ const UpdateExchange = async () => {
         let rate = data[fromcurr.value.toLowerCase()][tocurr.value.toLowerCase()];
         let finalAmount = (AmountVal * rate).toFixed(2);
 
+        ExchVal.style.transition = "opacity 0.3s ease";
         ExchVal.style.opacity = "0";
         setTimeout(() => {
             ExchVal.innerText = `${AmountVal} ${fromcurr.value} = ${finalAmount} ${tocurr.value}`;
@@ -76,7 +78,7 @@ Button.addEventListener("click", (event) => {
     UpdateExchange();
 });
 
-input = document.querySelector(".headers input");
+let input = document.querySelector("input");
 input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
         UpdateExchange();
@@ -98,12 +100,13 @@ swap.addEventListener("click", () => {
     currency1.selectedIndex = currency2.selectedIndex;
     currency2.selectedIndex = swapvar;
 
-    swap.style.transform = "rotate(180deg)";
+    swap.style.transition = "transform 0.3s ease";
+    swap.style.transform = "rotate(180deg) scale(1.2)";
     setTimeout(() => {
         swap.style.transform = "rotate(360deg)";
     }, 300);
     setTimeout(() => {
-        swap.style.transform = "";
+        swap.style.transform = "rotate(90deg)";
     }, 600);
 
     UpdateExchange();
