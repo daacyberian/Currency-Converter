@@ -1,142 +1,88 @@
-* {
+*{
     padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    margin : 0; 
 }
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    overflow-x: hidden;
-}
-
-.big-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+#headers{
+    margin : 10px;
     padding: 20px;
-    width: 100%;
-    max-width: 900px;
-    align-items: center;
+    display: block;
+    color: blanchedalmond;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    border-radius: 10px;
+    background-color: rgba(44, 48, 43, 0.479);
+    margin-left: 70px; 
 }
-
-#headers {
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
-    color: #fff;
-    text-align: center;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    animation: slideInLeft 0.8s ease-out;
+#headers{
+    animation-name: header-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-delay: 2ms;
+    animation-direction:normal;
 }
-
-@keyframes slideInLeft {
-    from {
+@keyframes header-animation{
+    0% {     
+        position: relative;
+        left: -250px;
         opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    }    
+    100%{     
+        position: relative;
+        left: 0px;
     }
 }
-
-h2 {
-    font-size: 28px;
+h2{
+    font-family: sans-serif;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+}
+h3{
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
-
-h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    opacity: 0.9;
-    letter-spacing: 0.5px;
-}
-
-input {
-    width: 100%;
-    height: 50px;
-    font-size: 24px;
+input{
+    height: 40px;
     font-weight: 600;
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    outline: none;
-    font-family: inherit;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-input:focus {
-    border-color: #e94560;
-    box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-button {
-    font-size: 16px;
-    width: 180px;
-    height: 45px;
-    font-family: inherit;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+    font-size: 20px;
+    margin-top: 5px;
+    border-radius: 20px;
     border: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+    outline: none;
+    font-family: sans-serif;
+    font-display:initial;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    background-color: rgba(44, 48, 43, 0.479);
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.55) ;
+    color: blanchedalmond;
 }
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
-
-button:active {
-    transform: translateY(0);
-}
-
-.Exchange-amount {
-    margin-top: 25px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-.Exchange-amount p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.5px;
-}
-
-#form {
+.big-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 400px;
+    height: 100vh;
+    background-image: url(images/image.jpg);
+    image-rendering: -webkit-optimize-contrast;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .dropdown {
@@ -144,29 +90,19 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    width: 100%;
-    padding: 25px;
-    position: relative;
+    border: 8px solid rgba(44, 48, 43, 0.752);
+    border-radius: 30px;
+    width: 55%;
+    height: 425px;
+    margin: 20px;
+    margin-top: 30px;
+    padding: 20px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    animation: slideInRight 0.8s ease-out;
+    position: relative;
+    background: url(videos/video.mp4) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
 }
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 .video {
     position: absolute;
     top: 0;
@@ -175,192 +111,213 @@ button:active {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.3;
 }
-
-.to,
-.from {
-    width: 100%;
-    padding: 20px;
+.to,.from{
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    background-color: rgba(44, 48, 43, 0.692);
+    border-radius: 40px;
+    color:  rgb(177,33,33,1);
 }
-
-.to:hover,
-.from:hover {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.from {
-    margin-bottom: 15px;
-}
-
-.to {
-    margin-top: 15px;
-}
-
-p {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    text-shadow: 0px , 0px , 2px , rgb(0px,0px,0px,0.5px);
 }
-
-select {
-    width: 100%;
-    max-width: 200px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    font-family: inherit;
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23fff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
+select{
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.419);
+    color:white;
+    text-align: center;
 }
-
-select:hover,
-select:focus {
-    border-color: #e94560;
-    outline: none;
-}
-
-select option {
-    background: #1a1a2e;
-    color: #fff;
-}
-
-#select {
+#select{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center;   
 }
-
-#icon {
-    width: 50px;
+#icon{
+    width: 10%;
+    height: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    background-color: rgba(44, 48, 43, 0.692);
+    border-radius: 40px;
+    color:rgba(255, 255, 255, 0.614);
+    padding: 10px;
+    margin: 20px;   
+    cursor: pointer;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid grey;
+    border-right: 3px solid grey;
+}
+#icon:active{
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+#button{
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+button{
+    font-size: 20px;
+    width : 200px;
     height: 50px;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
-    border-radius: 50%;
-    color: #fff;
+    font-family: sans-serif;
+    font-weight: bolder;
+    border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
-    border: none;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.75);
+    background-color: rgba(44, 48, 43, 0.479);
+    text-shadow: 0px 0px 20px rgba(145, 135, 135, 0.75) ;
+    color: blanchedalmond;
 }
 
-#icon:hover {
-    transform: rotate(180deg) scale(1.1);
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+.Exchange-amount{
+    margin-top: 30px;
 }
-
-#icon:active {
-    transform: rotate(180deg) scale(0.95);
+.dropdown{
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-delay: 2ms;
+    animation-direction:normal;
 }
-
-.from img,
-.to img {
-    width: 45px;
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.from img:hover,
-.to img:hover {
-    transform: scale(1.1);
+@keyframes animation {   
+    0% {     
+         position: relative;
+         right: -250px;
+         opacity: 0;
+    }    
+    100%{     
+        position: relative;
+         right: 0px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .big-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    #headers {
+        margin: 10px;
+        margin-left: 0;
+        width: 90%;
         padding: 15px;
     }
-
-    #headers {
-        padding: 20px;
-    }
-
     h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
-
     h3 {
+        font-size: 18px;
+    }
+    input {
+        height: 35px;
         font-size: 16px;
     }
-
-    input {
-        height: 45px;
-        font-size: 20px;
-    }
-
     .dropdown {
-        padding: 20px;
+        width: 90%;
+        height: auto;
+        min-height: 350px;
+        padding: 15px;
     }
-
-    select {
-        padding: 10px 15px;
-        font-size: 14px;
+    .to, .from {
+        width: 100%;
+        height: auto;
+        padding: 8px;
     }
-
-    .Exchange-amount p {
-        font-size: 14px;
-    }
-
-    button {
-        width: 150px;
+    #icon {
+        width: 50px;
         height: 40px;
+        font-size: 24px;
+    }
+    button {
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+    }
+    p {
         font-size: 14px;
+    }
+    select {
+        font-size: 12px;
+        padding: 8px;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    #headers {
-        max-width: 380px;
-    }
-
-    #form {
-        max-width: 380px;
-    }
-}
-
-@media screen and (min-width: 769px) {
     .big-container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 50px;
+        flex-direction: column;
+        gap: 20px;
     }
-
-    #headers,
-    #form {
-        width: 380px;
+    #headers {
+        margin: 10px;
+        margin-left: 0;
+        width: 80%;
+        max-width: 400px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .dropdown {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        min-height: 380px;
+    }
+    .to, .from {
+        width: 80%;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .big-container {
+        gap: 30px;
+    }
+    #headers {
+        margin-left: 30px;
+        width: 40%;
+        max-width: 400px;
+    }
+    .dropdown {
+        width: 45%;
+        max-width: 420px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .big-container {
+        gap: 40px;
+    }
+    #headers {
+        margin-left: 50px;
+        width: 38%;
+    }
+    .dropdown {
+        width: 45%;
+        max-width: 450px;
     }
 }
